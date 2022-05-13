@@ -1,7 +1,17 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    std::cout << "Just making sure!" << std::endl;
+    char hello[] = "---Hello, World!---";
+    std::cout << hello << std::endl;
+    std::cout << "The length of hello[] is = "
+              << string_length( hello ) << " characters"
+              << std::endl;
+    std::cout << "trim_left( hello ) = ["
+              << trim_left( hello )
+              << "]" << std::endl;
+    char buffer[32];
+    std::cout << "map_chars( \"hello\", buffer ) = ["
+              << map_chars( "hello", buffer )
+              << "]" << std::endl;
     return 0;
 }
